@@ -8,6 +8,17 @@
 </head>
 <body>
     <h1>My amazing blog!</h1>
-    
+    <form action="/addToBlog" method="POST">
+        <!-- <input type="text" placeholder="Enter item" name="ToDoItem"> -->
+        <textarea name="blogItem" cols="50" rows="10">What has happened since your last post?</textarea>
+        <input type="submit">
+        
+    </form>
+
+    <% blogs.forEach( element => { %>
+        <section>
+            <%= element.data %>
+        </section>
+    <% }) %>
 </body>
 </html>

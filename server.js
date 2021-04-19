@@ -28,6 +28,10 @@ app.get('/', async (req, response) => {
     response.render('index.ejs', {blogs: blogItem})
 })
 
+app.post('/addToBlog', (request,response) => {
+    
+})
+
 app.listen(process.env.PORT || PORT, ()=> {
     console.log(`Server is running on port ${PORT}.`)
 })
