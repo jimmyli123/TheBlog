@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h1>My amazing blog!</h1>
@@ -17,7 +19,8 @@
 
     <% blogs.forEach( element => { %>
         <section>
-            <%= element.data %>
+            <h3><%= element.postDate.substr(0, 15)%>, <%= element.postDate.substr(16,8) %></h3> 
+            <span class="blogActivity"> <%= element.blogPost %></span>
         </section>
     <% }) %>
 </body>
